@@ -1,0 +1,3 @@
+name,kind,serves,capacity_m3_day,donor_reservoir,min_donor_fill_pct,active,status
+Shumensko ezero link,transfer,all,10000,Шуменско езеро,0,False,"HYPOTHETICAL link, about 0.12 m3/s. Local reservoir at Shumen (OSM); it is not in the MOEW bulletin, so its volume and the link capacity are unknown: to be confirmed with ViK Shumen."
+Dibich link,transfer,all,8000,Дибич,0,False,"HYPOTHETICAL link, about 0.09 m3/s. Local reservoir Dibich (OSM); not in the MOEW bulletin: volume and capacity to be confirmed with ViK Shumen."

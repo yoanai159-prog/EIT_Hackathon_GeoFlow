@@ -1,0 +1,4 @@
+reservoir_id,name,total_capacity_m3,lat,lon
+1,Reservoir Alpha,790000,42.7,24.9
+2,Reservoir Beta,1450000,42.95,25.7
+3,Reservoir Gamma,520000,42.4,25.3

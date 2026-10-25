@@ -1,0 +1,50 @@
+date,avail_mm3,fill_pct,usable_mm3,usable_pct,inflow_m3s,outflow_m3s,trend,source_file,source
+2026-08-10,260.574,83.57,220.574,81.15,0.303,4.136,↓,10082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-11,260.242,83.46,220.242,81.03,0.176,4.009,↓,11082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-12,259.911,83.36,219.911,80.91,0.268,4.101,↓,12082026_Bulletin_Daily-1.pdf,MOEW daily bulletin
+2026-08-13,259.598,83.26,219.598,80.79,0.122,3.742,↓,13082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-14,259.322,83.17,219.322,80.69,0.197,3.391,↓,14082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-17,258.439,82.89,218.439,80.37,0.094,3.502,↓,17082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-18,258.145,82.79,218.145,80.26,0.09,3.497,↓,18082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-19,257.869,82.7,217.869,80.16,0.09,3.284,↓,19082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-20,257.556,82.6,217.556,80.04,0.115,3.735,↓,20082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-21,257.243,82.5,217.243,79.93,0.123,3.743,↓,21082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-24,256.305,82.2,216.305,79.58,0.126,3.746,↓,24082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-25,255.992,82.1,215.992,79.47,0.201,3.822,↓,25082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-26,255.679,82.0,215.679,79.35,0.205,3.825,↓,26082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-27,255.366,81.9,215.366,79.24,0.122,3.742,↓,27082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-08-28,255.054,81.8,215.054,79.12,0.113,3.733,↓,28082026_Bulletin_Daily.pdf,MOEW daily bulletin
+2026-09-04,252.988,81.14,212.988,78.36,0.11,3.553,↓,04092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-08,251.85,80.77,211.85,77.94,0.1,3.341,↓,08092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-09,251.57,80.68,211.57,77.84,0.071,3.312,↓,09092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-10,251.29,80.59,211.29,77.74,0.113,3.353,↓,10092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-11,251.01,80.5,211.01,77.63,0.076,3.317,↓,11092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-14,250.188,80.24,210.188,77.33,0.161,3.199,↓,14092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-15,249.96,80.17,209.96,77.25,0.096,2.729,↓,15092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-16,249.75,80.1,209.75,77.17,0.139,2.57,↓,16092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-17,249.54,80.03,209.54,77.09,0.083,2.514,↓,17092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-18,249.33,79.96,209.33,77.02,0.059,2.49,↓,18092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-21,248.7,79.76,208.7,76.78,0.096,2.526,↓,21092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-23,248.263,79.62,208.263,76.62,0.097,2.731,↓,23092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-24,248.018,79.54,208.018,76.53,0.102,2.938,↓,24092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-25,247.755,79.46,207.755,76.44,0.088,3.126,↓,25092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-28,246.985,79.21,206.985,76.15,0.079,3.112,↓,28092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-29,246.74,79.13,206.74,76.06,0.108,2.944,↓,29092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-09-30,246.495,79.06,206.495,75.97,0.1,2.936,↓,30092026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-01,246.25,78.98,206.25,75.88,0.104,2.94,↓,01102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-02,246.005,78.9,206.005,75.79,0.099,2.935,↓,02102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-05,245.27,78.66,205.27,75.52,0.089,2.925,↓,05102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-06,245.025,78.58,205.025,75.43,0.097,2.932,↓,06102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-07,244.78,78.51,204.78,75.34,0.065,2.901,↓,07102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-08,244.553,78.43,204.553,75.26,0.106,2.739,↓,08102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-09,244.308,78.35,204.308,75.17,0.083,2.919,↓,09102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-12,243.608,78.13,203.608,74.91,0.088,2.518,↓,12102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-13,243.433,78.07,203.433,74.85,0.124,2.149,↓,13102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-14,243.258,78.02,203.258,74.78,0.098,2.123,↓,14102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-15,243.083,77.96,203.083,74.72,0.093,2.119,↓,15102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-16,242.925,77.91,202.925,74.66,0.098,1.921,↓,16102026_Bulletin_Daily-1.docx,MOEW daily bulletin
+2026-10-19,242.435,77.75,202.435,74.48,0.081,1.903,↓,19102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-20,242.278,77.7,202.278,74.42,0.151,1.974,↓,20102026_Bulletin_Daily.docx,MOEW daily bulletin
+2026-10-21,242.12,77.65,202.12,74.36,0.082,1.905,↓,21102026_Bulletin_Daily (1).docx,MOEW daily bulletin
+2026-10-22,241.963,77.6,201.963,74.31,0.074,1.897,↓,22102026_Bulletin_Daily (1).docx,MOEW daily bulletin
+2026-10-23,241.805,77.55,201.805,74.25,0.114,1.937,↓,23102026_Bulletin_Daily (2).docx,MOEW daily bulletin

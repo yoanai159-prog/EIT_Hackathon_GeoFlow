@@ -1,0 +1,2 @@
+# optional: read .gpkg / .shp layers in data/vectors (GeoJSON needs nothing extra)
+geopandas

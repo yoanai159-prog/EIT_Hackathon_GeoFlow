@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dry Radar — демо карта на засегнатите места</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap">
+<style>
+:root{--bg:#EEF3F7;--surface:#FFFFFF;--text:#10222F;--muted:#4A6070;--border:#CBD7E0;--water:#0B3C5D;--accent:#C2570C;
+--ok:#1B7F4B;--warn:#8A5A00;--high:#C2570C;--crit:#B3261E;--map:#F4F7FA;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081A26;--surface:#0F2A3C;--text:#E8F1F7;--muted:#9DB4C4;--border:#24465D;--water:#7CC4EE;--accent:#F59E3B;
+--ok:#4CC38A;--warn:#F2C14E;--high:#F59E3B;--crit:#FF7B6E;--map:#0B2232}}
+:root[data-theme="dark"]{--bg:#081A26;--surface:#0F2A3C;--text:#E8F1F7;--muted:#9DB4C4;--border:#24465D;--water:#7CC4EE;--accent:#F59E3B;
+--ok:#4CC38A;--warn:#F2C14E;--high:#F59E3B;--crit:#FF7B6E;--map:#0B2232}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 32px}
+h1{font-size:26px;margin:0;letter-spacing:-.5px}h1 span{color:var(--accent)}
+.sub{color:var(--muted);margin:2px 0 16px;font-size:14px}
+.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px}
+svg{width:100%;height:auto;display:block;background:var(--map);border-radius:12px}
+label{font-size:13px;color:var(--muted);display:block;margin-bottom:2px}
+input[type=range]{width:100%}
+select{width:100%;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);font:inherit}
+.row{margin-bottom:12px}.val{color:var(--text);font-weight:700}
+.stat{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 0}
+.stat div{flex:1 1 140px;border:1px solid var(--border);border-radius:10px;padding:8px 10px}
+.stat b{display:block;font-size:20px}
+.set{border:1px solid var(--border);border-radius:12px;padding:10px;margin-top:10px;display:flex;flex-direction:column}
+.set h3{margin:0;font-size:16px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.badge{font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px;border:2px solid currentColor}
+.lv-ok{color:var(--ok)}.lv-warn{color:var(--warn)}.lv-high{color:var(--high)}.lv-crit{color:var(--crit)}
+.measure{font-size:13px;margin:4px 0 6px}
+.chk{font-size:13px;display:flex;gap:6px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:12px}
+.mk{fill:currentColor;stroke:var(--surface);stroke-width:2.5}
+.edge{stroke:currentColor;fill:none;stroke-linecap:round}
+.lbl{font-size:14px;font-weight:700;fill:var(--text)}.lbl2{font-size:12px;fill:var(--muted)}
+.ring{fill:none;stroke:var(--water);stroke-width:1.5;opacity:.5}
+.sweep{transform-origin:130px 320px;animation:spin 5s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sweep{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Dry <span>Radar</span> — кои места са засегнати?</h1>
+<p class="sub">Демо на прототип: язовир „Тича“ и зависимите от него места. Картата е схематична, не е в мащаб.</p>
+<div class="grid">
+<div class="card">
+<svg viewBox="0 0 600 420" role="img" aria-label="Схема: язовир Тича и зависими населени места">
+<circle class="ring" cx="130" cy="320" r="50"></circle><circle class="ring" cx="130" cy="320" r="110"></circle><circle class="ring" cx="130" cy="320" r="190"></circle>
+<g class="sweep"><path d="M130 320 L130 130 A190 190 0 0 1 262 184 Z" fill="var(--accent)" opacity=".18"></path></g>
+<g id="edges"></g>
+<g transform="translate(130 320)"><ellipse rx="34" ry="20" fill="var(--water)" opacity=".9"></ellipse><text class="lbl" y="42" text-anchor="middle">яз. Тича</text><text class="lbl2" id="fillLbl" y="58" text-anchor="middle"></text></g>
+<g id="nodes"></g>
+</svg>
+<p class="note">Форма на знака = ниво на риск: кръг – нисък, ромб – внимание, триъгълник – висок, квадрат – критичен.</p>
+</div>
+<div>
+<div class="card">
+<div class="row"><label for="sc">Сценарий</label>
+<select id="sc"><option value="norm">Нормален сезон (−0,8 пр. п./седм.)</option><option value="dry">Суха година (−2,0)</option><option value="ext" selected>Екстремна суша (−3,5)</option></select></div>
+<div class="row"><label for="wk">След колко седмици: <span class="val" id="wkv"></span></label><input id="wk" type="range" min="0" max="20" value="14"></div>
+<div class="stat"><div>Запълненост на Тича<b id="fillv"></b></div><div>Критично ниво (20%)<b id="critv"></b></div></div>
+</div>
+<div id="cards"></div>
+</div>
+</div>
+<p class="note">Реални данни: бюлетин №1627 от 04.09.2026 (Тича – 81,14% от общия обем) и справката за разпределение (2,450 млн. м³ за Шумен и Велики Преслав, 0,800 за Търговище, 0,500 минимален отток). Демо допускания: темпът на спад по сценарии, праговете (риск от 50% надолу, критично 20%), зависимостта на местата и резервните източници. Тези стойности са редактируеми и не са данни на операторите.</p>
+</div>
+<script>
+var FILL0=81.14,CRIT=20,TOP=50,FLOOR=12.83;
+var RATE={norm:0.8,dry:2.0,ext:3.5};
+var LV=[{k:'ok',t:'Нисък',max:.15,m:'Наблюдение, без действия.'},{k:'warn',t:'Внимание',max:.35,m:'Известяване на ВиК оператора и общината.'},{k:'high',t:'Висок',max:.6,m:'Подготовка на ограничителен режим и резервен източник.'},{k:'crit',t:'Критичен',max:9,m:'Ограничителен режим и алтернативно водоснабдяване.'}];
+var SH={ok:'M-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0Z',warn:'M0 -11L11 0L0 11L-11 0Z',high:'M0 -11L11 9L-11 9Z',crit:'M-9 -9H9V9H-9Z'};
+var S=[{id:'shu',n:'Шумен',x:480,y:190,dep:90,bk:false},{id:'vp',n:'Велики Преслав',x:300,y:240,dep:90,bk:false},{id:'tg',n:'Търговище',x:340,y:70,dep:70,bk:false}];
+var $=function(i){return document.getElementById(i)};
+var NS='http://www.w3.org/2000/svg';
+function mk(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var a in attrs)e.setAttribute(a,attrs[a]);parent.appendChild(e);return e}
+S.forEach(function(s){
+s.edge=mk('line',{x1:130,y1:320,x2:s.x,y2:s.y,class:'edge'},$('edges'));
+var g=mk('g',{transform:'translate('+s.x+' '+s.y+')'},$('nodes'));
+s.mk=mk('path',{class:'mk'},g);
+mk('text',{class:'lbl',y:-18,'text-anchor':'middle'},g).textContent=s.n;
+s.sub=mk('text',{class:'lbl2',y:28,'text-anchor':'middle'},g);
+var d=document.createElement('div');d.className='set';
+d.innerHTML='<h3><span>'+s.n+'</span><span class="badge" id="b-'+s.id+'"></span></h3><div class="measure" id="m-'+s.id+'"></div>'+
+'<label for="d-'+s.id+'">Зависимост от яз. Тича (демо): <span class="val" id="dv-'+s.id+'"></span></label><input id="d-'+s.id+'" type="range" min="0" max="100" value="'+s.dep+'">'+
+'<label class="chk"><input id="k-'+s.id+'" type="checkbox"> Има резервен източник (демо)</label>';
+$('cards').appendChild(d);s.card=d;
+$('d-'+s.id).oninput=function(e){s.dep=+e.target.value;render()};
+$('k-'+s.id).onchange=function(e){s.bk=e.target.checked;render()};
+});
+function render(){
+var wk=+$('wk').value,rate=RATE[$('sc').value];
+var fill=Math.max(FLOOR,FILL0-rate*wk);
+var sev=Math.min(1,Math.max(0,(TOP-fill)/(TOP-CRIT)));
+$('wkv').textContent=wk+' седм.';
+$('fillv').textContent=fill.toFixed(1).replace('.',',')+'%';
+$('fillLbl').textContent=fill.toFixed(1).replace('.',',')+'% запълнен';
+$('critv').textContent=fill<=CRIT?'достигнато':'след ~'+Math.ceil((FILL0-CRIT)/rate)+' седм.';
+var list=S.map(function(s){var r=sev*s.dep/100*(s.bk?.5:1);var L=LV.find(function(l){return r<l.max});return{s:s,r:r,L:L}});
+list.sort(function(a,b){return b.r-a.r});
+list.forEach(function(o,i){var s=o.s,k=o.L.k;
+s.mk.setAttribute('d',SH[k]);s.mk.parentNode.setAttribute('class','lv-'+k);
+s.edge.setAttribute('class','edge lv-'+k);s.edge.setAttribute('stroke-width',2+s.dep/100*9);
+s.edge.setAttribute('stroke-dasharray',s.bk?'2 8':'none');
+s.sub.textContent='риск '+Math.round(o.r*100)+'%'+(s.bk?' · резерв':'');
+var b=$('b-'+s.id);b.textContent=o.L.t+' · '+Math.round(o.r*100)+'%';b.className='badge lv-'+k;
+$('m-'+s.id).textContent=o.L.m;$('dv-'+s.id).textContent=s.dep+'%';
+s.card.style.order=i;});
+}
+$('wk').oninput=render;$('sc').onchange=render;render();
+</script>
+</body>
+</html>

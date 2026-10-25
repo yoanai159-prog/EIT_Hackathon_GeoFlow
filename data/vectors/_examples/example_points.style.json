@@ -1,0 +1,29 @@
+{
+ "type": "categorized",
+ "field": "status",
+ "categories": [
+  {
+   "value": "red",
+   "label": "Red",
+   "style": {
+    "fill": "#d22828",
+    "stroke": "#141414",
+    "radius": 9,
+    "fill_opacity": 0.9
+   }
+  },
+  {
+   "value": "green",
+   "label": "Green",
+   "style": {
+    "fill": "#2ea043",
+    "stroke": "#141414",
+    "radius": 7,
+    "fill_opacity": 0.9
+   }
+  }
+ ],
+ "default": {
+  "fill": "#999999"
+ }
+}

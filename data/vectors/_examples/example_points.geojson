@@ -1,0 +1,57 @@
+{
+ "type": "FeatureCollection",
+ "name": "example_points",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:EPSG::32635"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Example A",
+    "status": "red",
+    "population": 1200
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     480457.0,
+     4767505.7
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Example B",
+    "status": "green",
+    "population": 300
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     475555.4,
+     4763079.4
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Example C",
+    "status": "green",
+    "population": 640
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     483722.1,
+     4770828.6
+    ]
+   }
+  }
+ ]
+}

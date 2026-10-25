@@ -1,0 +1,3 @@
+reservoir,role,obs_date,scene,cloud_cover_pct,water_area_km2,centroid_lon,centroid_lat,area_pct_of_full
+Ticha,full,2026-05-06,S2C_35TMH_20260506_0_L2A,0.0,16.083,26.75586,43.05561,100.0
+Ticha,current,2026-10-05,S2A_35TMH_20261005_0_L2A,0.0,13.815,26.75772,43.05604,85.9

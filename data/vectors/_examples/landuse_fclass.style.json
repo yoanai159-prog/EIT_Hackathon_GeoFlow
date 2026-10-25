@@ -1,0 +1,252 @@
+{
+ "type": "categorized",
+ "field": "fclass",
+ "categories": [
+  {
+   "value": "forest",
+   "label": "forest",
+   "group": "Vegetation",
+   "style": {
+    "fill": "#2F6B4F",
+    "fill_opacity": 0.62,
+    "stroke": "#224d39",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "park",
+   "label": "park",
+   "group": "Vegetation",
+   "style": {
+    "fill": "#4FA56B",
+    "fill_opacity": 0.62,
+    "stroke": "#39774d",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "scrub",
+   "label": "scrub",
+   "group": "Vegetation",
+   "style": {
+    "fill": "#7E9A4B",
+    "fill_opacity": 0.62,
+    "stroke": "#5b6f36",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "heath",
+   "label": "heath",
+   "group": "Vegetation",
+   "style": {
+    "fill": "#B9B36A",
+    "fill_opacity": 0.62,
+    "stroke": "#8f8943",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "grass",
+   "label": "grass",
+   "group": "Vegetation",
+   "style": {
+    "fill": "#A9D18E",
+    "fill_opacity": 0.62,
+    "stroke": "#74b449",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "meadow",
+   "label": "meadow",
+   "group": "Vegetation",
+   "style": {
+    "fill": "#D3E6A6",
+    "fill_opacity": 0.62,
+    "stroke": "#a8ce4f",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "farmland",
+   "label": "farmland",
+   "group": "Agriculture",
+   "style": {
+    "fill": "#EBD98F",
+    "fill_opacity": 0.62,
+    "stroke": "#dbbb35",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "orchard",
+   "label": "orchard",
+   "group": "Agriculture",
+   "style": {
+    "fill": "#E59E6D",
+    "fill_opacity": 0.62,
+    "stroke": "#cf6a25",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "vineyard",
+   "label": "vineyard",
+   "group": "Agriculture",
+   "style": {
+    "fill": "#8E4B7B",
+    "fill_opacity": 0.62,
+    "stroke": "#663659",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "allotments",
+   "label": "allotments",
+   "group": "Agriculture",
+   "style": {
+    "fill": "#DDB84E",
+    "fill_opacity": 0.62,
+    "stroke": "#b58f23",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "farmyard",
+   "label": "farmyard",
+   "group": "Agriculture",
+   "style": {
+    "fill": "#C9A27A",
+    "fill_opacity": 0.62,
+    "stroke": "#a57543",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "residential",
+   "label": "residential",
+   "group": "Built-up",
+   "style": {
+    "fill": "#E27D8F",
+    "fill_opacity": 0.62,
+    "stroke": "#cf2e4b",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "commercial",
+   "label": "commercial",
+   "group": "Built-up",
+   "style": {
+    "fill": "#BF4A6E",
+    "fill_opacity": 0.62,
+    "stroke": "#8d324e",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "retail",
+   "label": "retail",
+   "group": "Built-up",
+   "style": {
+    "fill": "#F0B3C2",
+    "fill_opacity": 0.62,
+    "stroke": "#dd5173",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "industrial",
+   "label": "industrial",
+   "group": "Built-up",
+   "style": {
+    "fill": "#7C6FA8",
+    "fill_opacity": 0.62,
+    "stroke": "#574c7d",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "recreation_ground",
+   "label": "recreation ground",
+   "group": "Special use",
+   "style": {
+    "fill": "#8FD0B8",
+    "fill_opacity": 0.62,
+    "stroke": "#4bb28c",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "cemetery",
+   "label": "cemetery",
+   "group": "Special use",
+   "style": {
+    "fill": "#6C8E8E",
+    "fill_opacity": 0.62,
+    "stroke": "#4e6666",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "quarry",
+   "label": "quarry",
+   "group": "Special use",
+   "style": {
+    "fill": "#9B9A94",
+    "fill_opacity": 0.62,
+    "stroke": "#717069",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "landfill",
+   "label": "landfill",
+   "group": "Special use",
+   "style": {
+    "fill": "#4D4036",
+    "fill_opacity": 0.62,
+    "stroke": "#372e27",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  },
+  {
+   "value": "military",
+   "label": "military",
+   "group": "Special use",
+   "style": {
+    "fill": "#8F3B3B",
+    "fill_opacity": 0.62,
+    "stroke": "#672a2a",
+    "stroke_opacity": 0.9,
+    "weight": 0.8
+   }
+  }
+ ],
+ "default": {
+  "fill": "#D9D9D9",
+  "fill_opacity": 0.5,
+  "stroke": "#A0A0A0",
+  "weight": 0.6
+ }
+}

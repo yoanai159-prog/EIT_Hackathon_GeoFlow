@@ -1,0 +1,4 @@
+name,lat,lon,population,supply_group,dependence,backup_m3_day,critical_facility,source_note
+Shumen,43.27038,26.92474,85504,shumen_vpreslav,0.9,0,False,"Position and population: OSM (Settlements_OSM). Dependence on Ticha is a demonstration assumption (team prototype); to be confirmed by ViK Shumen."
+Veliki Preslav,43.16084,26.81207,8843,shumen_vpreslav,0.9,0,False,"Position and population: OSM. Dependence is a demonstration assumption."
+Targovishte,43.2512,26.5719,35000,targovishte,0.7,0,False,"Position approximate, outside the Shumen data set; population is a rounded placeholder to verify (NSI). Dependence is a demonstration assumption."
